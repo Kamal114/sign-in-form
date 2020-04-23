@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 *{
 	margin: 0;
@@ -177,4 +178,32 @@
 	outline: none;
 	border: 2px solid #fff;
 	cursor: pointer;
+}
+
+.header{
+	width: 50%;
+	position: relative;
+	background: linear-gradient(to top, rgba(0, 0, 0, .4), rgba(0, 0, 0, .2)),url(images/bg2.jpeg) center no-repeat;
+}
+
+.header h1{
+	position: absolute;
+	top: 15%;
+	left: 50%;
+	transform: translateX(-50%);
+	text-align: center;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 40px;
+}
+
+.x-btn{
+	position: absolute;
+	bottom: -5%;
+	right: 1%;
+	cursor: pointer;
+	color: #262626;
+	font-size: 26px;
 }
