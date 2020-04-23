@@ -8,10 +8,12 @@
 .container{
 	width: 100%;
 	height: 100vh;
-	background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.6)),url(./images/bg1.jpeg);
-	background-position: center;
+	/*background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.6)),url(./images/bg1.jpeg);*/
+	/*background-position: center;*/
+	/*background-repeat: no-repeat;*/
 	background-size: cover;
-	background-repeat: no-repeat;
+	background-color: #cc683c;
+	
 }
 
 .banner{
@@ -24,6 +26,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	display: none;
 }
 
 .banner-heading{
@@ -78,9 +81,100 @@
 }
 
 .form-container{
-	display: none;
+	display: flex;
+	width: 850px;
+	height: 600px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.sign-in-form{
+	width: 50%;
+	padding: 120px 50px;
+	background: #232328;
+	box-sizing: border-box;
+}
+
+.sign-in-form .form-input{
+	width: 300px;
+	font-size: 18px;
+	margin-bottom: 20px;
+	background: transparent;
+	outline: none;
+	border: none;
+	border-bottom: 2px solid #fff; 
+	padding: 15px 0;
+	transition: border-bottom .8s;
+}
+
+.sign-in-form .form-input:focus{
+	border-bottom: 2px solid red;
+}
+
+.sign-in-form p{
+	color: #fff;
+	font-size: 18px;
+	text-transform: uppercase;
+	margin-bottom: 15px;
+
+}
+
+.sign-in-form label{
+	color: #fff;
+	text-transform: uppercase;	
+}
+
+.sign-in-form input[type='checkbox']{
+	position: relative;
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 35px;
+    height: 15px;
+    background: #eee;
+    outline: none;
+    border-radius: 20px;
+    margin: 0 8px;
+    transition: background .8s;
+}
+
+.sign-in-form input:checked[type='checkbox']{
+	background: red;
+}
+
+.sign-in-form input[type='checkbox']::before{
+	content: '';
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background: gray;
+	left: -1px;
+	top: -2px;
+	border-radius: 20px;
+	transition: all .8s;
+
+}
+
+.sign-in-form input:checked[type='checkbox']::before{
+	position: absolute;
+	top: -2px;
+	left: 15px;	
 }
 
 
-
-
+.form-btn{
+	display: block;
+	margin-top: 80px;
+	width: 200px;
+	padding: 15px 10px;
+	border-radius: 20px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	background: transparent;
+	color: #fff;
+	outline: none;
+	border: 2px solid #fff;
+	cursor: pointer;
+}
